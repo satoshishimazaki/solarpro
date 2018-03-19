@@ -1,0 +1,15 @@
+current directory: /Applications/solarprj/solarpro/vender/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+/Users/satoshishimazaki/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180319-14128-s9shgl.rb extconf.rb
+creating Makefile
+
+current directory: /Applications/solarprj/solarpro/vender/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Applications/solarprj/solarpro/vender/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Applications/solarprj/solarpro/vender/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180319-14128-4bnmck/bindex
