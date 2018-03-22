@@ -1,0 +1,33 @@
+<div class="container">
+     <div class="row">
+       <div class="container-fluid">
+          <h1>
+            <a href="index.html">
+              
+              太陽光発電メンテナンス専門の業者紹介・選定サービス
+            </a>
+            <%= image_tag("logo.svg", :alt => "太陽光メンテプロ") %>
+          </h1>
+
+          <nav class="">
+            <ul>
+              <li><a href="#service">サービス</a></li>
+              <li><a href="#point">特徴・メリット</a></li>
+              <li><a href="#flow">ご利用の流れ</a></li>
+              <li><a href="#faq">よくある質問</a></li>
+              <li><a href="#contact">ご依頼・お問い合わせ</a></li>
+            </ul>
+          </nav>
+
+          <p class="btn-mail hidden-lg-up">
+            <img src="images/icon/icon-mail.svg" alt="お問い合わせ">
+          </p>
+
+          <div class="tel-box hidden-md-down">
+            <p class="txt-01">お電話での<span>無料</span>見積依頼・ご相談は </p>
+            <a href="tel:0120917819"><img src="images/icon/icon-tel.svg" alt="電話アイコン"> 0120-917-819</a>
+            <p class="txt-02">営業時間 10:00～19:00 土・日・祝休<br>メール・問い合わせは24時間365日受付</p>
+          </div>
+        </div><!--container-fluid-->
+      </div><!--row-->
+    </div><!--container-->

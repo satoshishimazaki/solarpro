@@ -1,2 +1,19 @@
+@charset "utf-8";
+
+//bookmarks
+//add : Ctrl+Shift+K
+//next : Ctrl+P
+//prev : Ctrl+Shift+P
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import "partials/definition/variable";
+@import "partials/definition/mixin";
+@import "partials/setting/reset";
+@import "partials/setting/setting";
+@import "partials/module/parts";
+@import "./partials/layout/header";
+@import "partials/layout/footer";
+@import "partials/layout/top";
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css); 

@@ -1,0 +1,574 @@
+@import "partials/definition/variable";
+@import "partials/definition/mixin";
+
+@charset "utf-8";
+
+@media #{$desktop3} {
+  .container{
+    width: 960px;
+  }
+}
+
+
+/*メインビジュアル
+---------------------------------------*/
+.main-visual{
+  height: 500px;
+  background:url(#{$imgPath}/bg-main-visual.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  .container-fluid > div{
+    position: relative;
+    height:500px;
+
+    &.left-box{
+      padding-top: 40px;
+      ul{
+        @extend %cf;
+        margin-bottom: 24px;
+        li{
+          position: relative;
+          z-index: 0;
+          font-size: 2.6rem;
+          font-weight: bold;
+          padding: 0 16px;
+          float: left;
+          color: $cb;
+          height: 60px;
+          line-height: 60px;
+          margin-right: 16px;
+          &::before{
+            z-index: -1;
+            @include absPosition($top: auto, $right: 0, $bottom: 0, $left: auto);
+            content: "";
+            display: block;
+            background: $cs2;
+            width: 100%;
+            height:60px;
+            transform:skew(-15deg);
+          }
+        }
+      }//ul
+
+      .txt-01{
+        position: relative;
+        z-index: 1;
+        font-size: 5rem;
+        font-weight: bold;
+        line-height: 1.4em;
+        color: $cb;
+        margin-bottom: 24px;
+        text-shadow: 0 0 16px rgba($cf,0.5);
+      }
+      .txt-02{
+        color: $cb;
+        font-size: 2rem;
+        font-weight: 500;
+        text-shadow: 0 0 16px rgba($cf,0.5);
+      }
+
+      .img-staff{
+        width: 400px;
+        @include absPosition($top: auto, $right: -100px, $bottom: 0, $left: auto);
+      }
+    }
+  }
+}//.main-visual
+
+
+/*メンテナンスサービス一覧
+---------------------------------------*/
+.section-service{
+  background:url(#{$imgPath}/bg-service.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  ul{
+    li{
+      .inner-box{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: -20px;
+        background: #fff;
+        padding: 16px;
+        text-align: center;
+        h3{
+          font-size: 1.7rem;
+          font-weight: bold;
+          color: $cs;
+          margin-bottom: 16px;
+        }
+      }
+      &:nth-child(-n+3){
+        margin-bottom: 30px;
+      }
+    }
+  }
+}//.section-service
+
+/*太陽メンテプロ利用の特徴・メリット
+---------------------------------------*/
+.section-point{
+  background: $cs;
+  h2{
+    background: $cb;
+    color: $cs;
+    padding: 20px;
+  }
+  .txt-01{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  ul{
+    background: $cb;
+    padding: 30px;
+    li{
+      .inner-box{
+        border: 2px solid $cs;
+        h3{
+          font-size: 2.4rem;
+          line-height: 1.6em;
+          font-weight: bold;
+          text-align: center;
+          padding: 16px;
+          span{
+            color: $ck;
+          }
+        }
+        p{
+           padding: 16px;
+           padding-top: 0;
+        }
+      }
+    }
+  }
+}//.section-point
+
+
+/*太陽光メンテプロご利用の流れ
+---------------------------------------*/
+.section-flow{
+  padding-top: 0;
+  h2{
+    position: relative;
+    color: $cs;
+    background: $cs3;
+    padding: 20px;
+    &::after{
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 60px 80px 0 80px;
+      border-color: $cs3 transparent transparent transparent;
+      @include absPosition($top: auto, $right: 0, $bottom: -60px, $left: 0);
+      top: auto;
+      display: block;
+      margin: 0 auto ;
+    }
+  }//h2
+
+  .txt-01{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: $cs;
+    margin: 90px auto 30px;
+  }
+
+
+  ul{
+    @extend %cf;
+    li{
+      border: 2px solid $cs;
+      float: left;
+      width:20.5%;
+      &:nth-child(even){
+        @extend %flex_align;
+        width:6%;
+        border: none;
+        transform: scale(.8);
+        img{
+          width: 100%;
+        }
+      }
+
+      .txt-02{
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: bold;
+        color: $cb;
+        background: $cs;
+        height:50px;
+        line-height: 50px;
+        margin-bottom: 16px;
+      }
+      h3{
+        color: $ck;
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: bold;
+      }
+      .txt-03{
+        padding: 16px;
+      }
+    }//li
+  }
+}//.section-flow
+
+
+/*よくあるご質問
+---------------------------------------*/
+.section-faq{
+  background:url(#{$imgPath}/bg-faq.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  h2{
+    background: none;
+    color: $cb;
+  }
+  dl{
+    dt{
+      font-size: 2.6rem;
+      color: $cb;
+      margin-bottom: 16px;
+      line-height: 2em;
+      opacity: 0;
+      span{
+        color: $cs3;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+      &.open{
+        color: $cs3;
+      }
+    }
+    dd{
+      display: none;
+      background: $cb;
+      padding: 16px;
+      margin-bottom: 16px;
+      line-height: 1.6em;
+      span{
+        color: $ck;
+      }
+    }
+  }
+}//.section-faq
+
+/*ご依頼・お問い合わせはこちらから
+---------------------------------------*/
+.section-contact{
+  h2{
+    position: relative;
+    color: $cs;
+    background: $cs3;
+    padding: 20px;
+    &::after{
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 60px 80px 0 80px;
+      border-color: $cs3 transparent transparent transparent;
+      @include absPosition($top: auto, $right: 0, $bottom: -60px, $left: 0);
+      top: auto;
+      display: block;
+      margin: 0 auto ;
+    }
+  }//h2
+
+  .inner-box{
+    margin-top: 90px;
+    border: 20px solid $cs;
+    padding: 32px;
+  }
+
+  .txt-03 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 4rem;
+    color: #007DC0;
+    margin: 0 auto 40px;
+  }
+  .fukidashi-box{
+    width: 280px;
+    padding: 16px;
+    background: $cb;
+    box-sizing: border-box;
+    position: relative;
+    top: 160px;
+    z-index: 1;
+    @include bs($x:0,$y:0,$b:10px);
+    //@include absPosition($top: auto, $right: -100px, $bottom: 0px, $left: auto);
+    p{
+      text-align: center;
+      span{
+        width: 100%;
+        display: block;
+        color: $cb;
+        background: $cs2;
+        font-size: 2rem;
+        font-weight: bold;
+        padding:8px 0;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .img-staff{
+    width: 400px;
+    @include absPosition($top: auto, $right: -60px, $bottom: 80px, $left: auto);
+
+  }
+
+
+
+  .tel-box{
+    @include absPosition($top: auto, $right: auto, $bottom: 0px, $left: 0);
+    .txt-01{
+      margin-top: 4px;
+      font-size: 2rem;
+      font-weight: bold;
+      span{
+        color: $ck;
+      }
+    }
+    a{
+      color: $ck;
+      font-size:5rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+      img{
+        width: 40px;
+      }
+      &:hover{
+        cursor: default;
+      }
+    }
+    .txt-02{
+      font-size: 1.4rem;
+    }
+  }//.tel-box
+
+  .form-box{
+    padding: 24px;
+    background:rgba($cl, 0.8);
+    .txt-02{
+      color: $cf;
+    }
+  }
+}//.section-contact
+
+/*sp Layout
+---------------------------------------*/
+@media #{$sp} {
+
+  .main-visual{
+    height: inherit;
+    .container-fluid > div{
+      height: 100%;
+      &.left-box{
+        padding: 0;
+        padding-top: 40px;
+        ul{
+          li{
+            font-size: 1.8rem;
+            letter-spacing: -1px;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 8px;
+            &:last-of-type{
+              margin-right: 0;
+            }
+            &::before{
+              height: 50px;
+            }
+          }
+        }
+        .txt-01{
+          font-size: 3.2rem;
+        }
+        .txt-02{
+          position: relative;
+          font-size: 1.4rem;
+          line-height: 2em;
+          z-index: 100;
+          margin-bottom: 20px;
+        }
+        .img-staff{
+          right: -120px;
+        }
+        .btn-irai{
+          position: relative;
+          z-index: 100;
+          margin-bottom: 40px;
+          @include bs($x:0,$y:0,$b:10px);
+          img{
+            vertical-align: bottom;
+          }
+        }
+      }//
+    }
+  }//.main-visual
+
+  .section-point{
+    ul{
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 15px;
+      li{
+        padding: 0;
+        margin-bottom: 15px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        .inner-box h3{
+          font-size: 2.2rem;
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }//.section-point
+
+  .section-flow{
+    .txt-01{
+      font-size: 2.6rem;
+      margin: 80px auto 30px;
+    }
+    ul{
+      li{
+        float: none;
+        margin: 0;
+        width: 100%;
+        &:nth-child(even){
+          display: block;
+          width: 100%;
+          text-align: center;
+          transform:rotateZ(90deg) scale(1) ;
+          img{
+            width: 40px;
+          }
+        }
+        h3{
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }//section-flow
+
+  .section-faq{
+    dl{
+      dt{
+        font-size: 2rem;
+      }
+    }
+
+  }//section-faq
+
+  .section-contact{
+    .container{
+      padding: 0;
+    }
+    .inner-box{
+      padding: 15px;
+      border-width: 15px;
+    }
+    .form-box{
+      padding: 15px;
+    }
+    h2{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .txt-03{
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
+    ul{
+      li{
+        overflow: hidden;
+        &:last-of-type{
+          margin-top: -60px;
+        }
+      }
+    }
+    .fukidashi-box{
+      width: 180px;
+      background: $cb;
+      box-sizing: border-box;
+      @include absPosition($top: 25%, $right: auto, $bottom: auto, $left: 15px);
+      p{
+        font-size: 1.4rem;
+      }
+    }
+
+    .img-staff{
+      width: 280px;
+      position: relative;
+      left: 100px;
+      bottom: inherit;
+      right: inherit;
+    }
+
+    .tel-box{
+      position: relative;
+      bottom: auto;
+      left: auto;
+      .txt-01{
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+      }
+      a{
+        font-size: 4rem;
+        img{
+          width: 32px;
+        }
+      }
+    }
+
+  }//section-contact
+
+}//@media #{$sp}
+
+
+/*tablet Layout
+---------------------------------------*/
+@media #{$sm} {
+  .main-visual{
+    .container-fluid > div{
+      &.left-box{
+        .txt-01{
+          font-size: 5rem;
+        }
+        .txt-02{
+          font-size: 2rem;
+        }
+        .img-staff{
+          width: 560px;
+          right: -100px;
+        }
+      }
+    }
+  }//
+
+  .section-contact{
+    ul li{
+      &:first-of-type{
+        width: 400px;
+        margin: 0 auto;
+        overflow: inherit;
+      }
+      .fukidashi-box{
+        width: 250px;
+        left: -40px;
+      }
+    }
+  }
+}//@media #{$sm}

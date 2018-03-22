@@ -1,0 +1,112 @@
+@import "partials/definition/variable";
+
+@charset "utf-8";
+
+/*mixin*/
+
+/*clearfix @include cf
+==============================================================================================*/
+@mixin cf {content: ""; display: table; clear: both;}
+
+
+/*element center @include mc
+==============================================================================================*/
+@mixin mc {display: block;margin: 0 auto;}
+
+
+/*last element @include le
+==============================================================================================*/
+@mixin le {border: none; margin-bottom: 0; padding-bottom: 0;}
+
+
+/*link color @include linkColor(#XXXXXX);
+==============================================================================================*/
+@mixin linkColor($color) {
+    color: $color;
+    display: inline-block;
+    text-decoration: none;
+    transition:color .5s ease-in;
+    &:hover,
+    &:active,
+    &:focus {
+        color: lighten($color, 30%);
+        text-decoration: none;
+    }
+}
+
+
+/*absolute @include absPosition($top: auto, $right: auto, $bottom: auto, $left: auto);
+==============================================================================================*/
+@mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {position: absolute; top: $top; right: $right; bottom: $bottom; left: $left;}
+
+
+/*fixed @include fixPosition($top: auto, $right: auto, $bottom: auto, $left: auto);
+==============================================================================================*/
+@mixin fixPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {position: fixed; top: $top; right: $right; bottom: $bottom; left: $left;}
+
+
+/*relative @include relPosition($top: auto, $right: auto, $bottom: auto, $left: auto);
+==============================================================================================*/
+@mixin relPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {position: relative; top: $top; right: $right; bottom: $bottom; left: $left;}
+
+
+/*bg @include bgImg ( $repeat: no-repeat , $size: auto, $x:auto ,$y:auto );
+==============================================================================================*/
+@mixin bgImg ($repeat: no-repeat, $size: auto, $x:auto, $y:auto) {
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $x $y;
+}
+
+/*box shadow @include bs($x:0,$y:0,$b:0);
+==============================================================================================*/
+@mixin bs($x:0, $y:0, $b:0) {
+    box-shadow: $x $y $b rgba(0, 0, 0, 0.2);
+}
+
+/*font awesome @include fa("\f105");
+==============================================================================================*/
+@mixin fa($code) {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: $code;
+}
+
+/*triangle @include triangle($c:white,$h:40px,$h2:-40px,$w:80px);
+==============================================================================================*/
+@mixin triangle($c:white,$h:40px,$h2:-40px,$w:80px){
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $h $w 0 $w;
+    border-color: $c transparent transparent transparent;
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: $h2;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+/*float none
+==============================================================================================*/
+@mixin fnone{
+    width: 100%;
+    float: none;
+}
+
+
+/*vendor prefix @include vp(XXX , XXX);
+==============================================================================================*/
+@mixin vp($property, $value) {
+    @each $prefix in
+    -webkit-,
+    -moz-,
+    //-ms-,
+    //-o-,
+    '' {
+        #{$prefix}#{$property}: $value;
+    }
+}

@@ -1,0 +1,141 @@
+@import "partials/definition/variable";
+@import "partials/definition/mixin";
+
+@charset "utf-8";
+
+/*common
+==============================================================================================*/
+html {
+  font-size: 62.5%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  color: $cf;
+  width: 100%;
+  min-width: 320px;
+  font-size: 1.6rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  //font-feature-settings: "palt";
+  text-align: justify;
+  overflow-x: hidden;
+
+  &.no_scroll{
+    position: fixed;
+    overflow-y: scroll;
+  }
+}
+
+img{
+ max-width: 100%;
+ height: auto;
+}
+iframe{
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+p{
+  line-height: 1.6em;
+  letter-spacing:1px;
+}
+
+.container,.container-fluid{
+  position: relative;
+}
+
+/*a
+==============================================================================================*/
+a {
+  @include linkColor($ck);
+  &:hover{
+  }
+}
+
+/*form
+==============================================================================================*/
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),button, textarea, select{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#wrapper{
+input{
+  &[type="text"],
+  &[type="password"],
+  &[type="search"],
+  &[type="number"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="email"]{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding:2.5%;
+    height: 60px;
+    background: $cb;
+    border: 1px solid $cl;
+    @media #{$desktop} {
+      height: 50px;
+    }
+    box-sizing: border-box;
+    border: 1px solid $cl;
+  }
+  &[type="submit"],&[type="reset"],&[type="button"]{
+    padding:2.5%;
+    background: $ck;
+    color: $cb;
+    height: 60px;
+    @media #{$desktop} {
+      height: 50px;
+    }
+    min-width: 50px;
+    text-align: center;
+  }
+
+  &[type="image"]{
+    width: 100%;
+  }
+
+  &::-webkit-input-placeholder{
+    padding-top: 4px;
+  }
+
+}//input
+
+textarea{
+    padding:2.5%;
+    box-sizing: border-box;
+    border: 1px solid $cl;
+}
+select{
+  width: 100%;
+    padding: 2.5%;
+    height: 60px;
+    @media #{$desktop} {
+      height: 50px;
+    }
+    box-sizing: border-box;
+    border: 1px solid $cl;
+    background: $cb;
+}
+select::-ms-expand {
+    display: none;
+}
+
+button{
+  @extend input[type="submit"];
+}
+
+}
