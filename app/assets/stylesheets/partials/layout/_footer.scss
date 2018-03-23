@@ -9,7 +9,9 @@ footer{
   padding-top: 20px;
   box-sizing: border-box;
   background: $cs;
-
+  .container-fluid {
+    margin-top: 30px;
+  }
   .logo{
     width: 280px;
     float: left;

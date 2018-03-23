@@ -104,30 +104,30 @@
 /*animation
 ==============================================================================================*/
 .fadeIn_off {
-    transition:transform .8s 	ease-in-out ;
-    opacity: 0;
-    @include vp(transform, translateY(60px));
+    // transition:transform .8s 	ease-in-out ;
+    // opacity: 0;
+    // @include vp(transform, translateY(60px));
 }
 .fadeIn_off ul.list-fade-in li{
-  opacity: 0;
+  // opacity: 0;
 }
 .fadeIn_on {
-    opacity: 1;
-    @include vp(transform, translateY(0));
+    // opacity: 1;
+    // @include vp(transform, translateY(0));
 }
 .slideLeft_off {
-    @include vp(transform, translatex(-200px));
-    transition:transform .8s 	ease-in-out;
+    // @include vp(transform, translatex(-200px));
+    // transition:transform .8s 	ease-in-out;
 }
 .slideLeft_on {
-    @include vp(transform, translatex(0));
+    // @include vp(transform, translatex(0));
 }
 .slideRight_off {
-    @include vp(transform, translatex(200px));
-    transition:transform .8s 	ease-in-out;
+    // @include vp(transform, translatex(200px));
+    // transition:transform .8s 	ease-in-out;
 }
 .slideRight_on {
-    @include vp(transform, translatex(0));
+    // @include vp(transform, translatex(0));
 }
 
 
