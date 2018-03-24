@@ -50,7 +50,8 @@
                 <%= image_tag("icon/icon-time.svg", :alt => "時計アイコン") %>
                 カンタン10秒</p>
               <p class="txt-02">あとはコンシェルジュの連絡を待つだけ！</p>
-              <form action="" method="post">
+              <%= render 'layouts/InquiryForm' %>
+              <!-- <form action="" method="post">
                 <select class="st">
                   <option value="" selected="selected">選択してください</option>
                   <option value="">ダミー1</option>
@@ -61,7 +62,7 @@
                 <input type="tel" name="" placeholder="電話番号 例：09000000000"/>
                 <input type="email" name="" placeholder="メール 例：×××@××.co.jp"/>
                 <input type="image" src="images/btn-submit.svg" alt="送信する">
-              </form>
+              </form> -->
             </div>
           </div><!--container-fluid-->
         </div><!--row-->
@@ -272,18 +273,7 @@
                         <%= image_tag("icon/icon-time.svg", :alt => "時計アイコン") %>
                         カンタン10秒</p>
                       <p class="txt-02">あとはコンシェルジュの<br class="hidden-lg-up">連絡を待つだけ！</p>
-                      <form action="" method="post">
-                        <select class="st">
-                          <option value="" selected="selected">選択してください</option>
-                          <option value="">ダミー1</option>
-                          <option value="">ダミー2</option>
-                          <option value="">ダミー3</option>
-                        </select>
-                        <input type="text" name="" placeholder="お名前 例：山田太郎"/>
-                        <input type="tel" name="" placeholder="電話番号 例：09000000000"/>
-                        <input type="email" name="" placeholder="メール 例：×××@××.co.jp"/>
-                        <input type="image" src="images/btn-submit.svg" alt="送信する">
-                      </form>
+                      <%= render 'layouts/InquiryForm' %>
                     </div>
 
                     <div class="tel-box hidden-lg-up">

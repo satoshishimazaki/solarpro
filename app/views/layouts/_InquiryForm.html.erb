@@ -1,0 +1,7 @@
+<%= form_with scop: 'inquiry' do |f| %>
+  <%= f.select :servicecategories, ['希望サービス(選択してください)','駆けつけ対応', 'モジュール洗浄', '点検・計測', '雑草対策', '遠隔監視システム', '定期メンテナンスパッケージ', 'その他'], class: :st  %>
+  <%= f.text_field :name, :placeholder => "お名前 例：山田太郎"  %>
+  <%= f.text_field :tel, :placeholder => "電話番号 例：09000000000" %>
+  <%= f.text_field :email, :placeholder => "メール 例：×××@××.co.jp" %>
+  <%= image_submit_tag("btn-submit.svg") %>
+<% end %>
