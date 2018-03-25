@@ -7,10 +7,14 @@ class InquiriesController < ApplicationController
 		@inquiry = Inquiry.new(inquiry_params)
 		if @inquiry.save
 			redirect_to root_path
+			# @test = Writespread.new
+			# @test.test(@inquiry[:email])
 		else
 			render 'new'
 		end
 	end
+
+
 
 	private
 		def inquiry_params
