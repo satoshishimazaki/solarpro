@@ -4,6 +4,7 @@ class NotificationMailer < ApplicationMailer
 		mail(
 			# to: %w(s-shimazaki@zielson.com zielson.info@gmail.com),
 			# to: "s-shimazaki@zielson.com",
+			to: "zielson.info@gmail.com",
 			subject: "solarpro新規問い合わせのお知らせ"
 		) do |format|
 			format.text
