@@ -93,11 +93,15 @@
         background: #fff;
         padding: 16px;
         text-align: center;
+        height: 200px;
         h3{
           font-size: 1.7rem;
           font-weight: bold;
           color: $cs;
           margin-bottom: 16px;
+        }
+        p{
+          text-align: left;
         }
       }
       &:nth-child(-n+3){
@@ -131,7 +135,7 @@
           line-height: 1.6em;
           font-weight: bold;
           text-align: center;
-          padding: 16px;
+          padding: 16px 10px;
           span{
             color: $ck;
           }
@@ -250,9 +254,9 @@
       span{
         color: $cs3;
       }
-      &:hover{
-        cursor: pointer;
-      }
+      // &:hover{
+      //   cursor: pointer;
+      // }
       &.open{
         color: $cs3;
       }
@@ -426,7 +430,11 @@
       }//
     }
   }//.main-visual
-
+  .section-service {
+    .inner-box{
+      height: 100px;
+    }
+  }
   .section-point{
     ul{
       margin: 0 auto;
