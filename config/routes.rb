@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # get '/signup_path', to: 'inquiry#new' 
   resources :inquiries, only: [:create, :edit]
   post "/" => "inquiries#new"
+  # get "/thank" => "inquiries#create"
+  # get "inquiries/thank" => "inquiries#thank"
 end
