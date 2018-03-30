@@ -11,9 +11,9 @@
         </strong></p>
 
         <ul>
-          <li><a href="#">運営会社</a></li>
-          <li><a href="#">利用規約</a></li>
-          <li><a href="#">プライバシーポリシー</a></li>
+          <li><%= link_to '運営会社', {:controller => 'static_pages', :action => 'company'} %></li>
+          <li><%= link_to '利用規約', {:controller => 'static_pages', :action => 'agreement'} %></li>
+          <li><%= link_to 'プライバシーポリシー', {:controller => 'static_pages', :action => 'privacy'} %></li>
         </ul>
 
 

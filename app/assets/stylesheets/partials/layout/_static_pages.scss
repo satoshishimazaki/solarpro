@@ -1,0 +1,111 @@
+@import "partials/definition/variable";
+@import "partials/definition/mixin";
+
+@charset "utf-8";
+
+@media #{$desktop3} {
+  .container{
+    width: 960px;
+  }
+}
+
+
+/*会社情報ページ
+---------------------------------------*/
+.section-company{
+  padding: 60px 0;
+  h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: $cs;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+  }
+  th {
+    padding: 2%;
+    text-align: left;
+  }
+  .box{
+    // text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    border: solid $cs;
+  }
+}//.section-service
+
+
+/*規約・プライバシーポリシー
+---------------------------------------*/
+.section-agree_privacy{
+  padding: 60px 0;
+  h2{
+    color: $cs;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+  h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: $cs;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    text-align: left;
+  }
+  table {
+    width: 100%;
+  }
+  th {
+    padding: 2%;
+    text-align: left;
+  }
+  .box{
+    // text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    border: solid $cs;
+  }
+}//.section-service
+
+/*sp Layout
+---------------------------------------*/
+@media #{$sp} {
+  .section-company{
+    padding: 20px 0;
+    h3{
+      font-size: 2rem;
+      font-weight: bold;
+      color: $cs;
+      margin-bottom: 5%;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+    }
+    th {
+      padding: 2%;
+      text-align: left;
+    }
+    .box{
+      // text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      border: solid $cs;
+    }
+  }//.section-service
+}//@media #{$sp}
+
+
+/*tablet Layout
+---------------------------------------*/
+@media #{$sm} {
+ 
+
+}//@media #{$sm}
