@@ -6,7 +6,7 @@ class InquiriesController < ApplicationController
 	def create
 		@inquiry = Inquiry.new(inquiry_params)
 		if @inquiry.save
-			# NotificationMailer.send_notification(@inquiry).deliver
+			NotificationMailer.send_notification(@inquiry).deliver
 			# redirect_to inquiries_thank_path(id:@inquiry.id)
 			render 'thank'
 			# @test = Writespread.new
