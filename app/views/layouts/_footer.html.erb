@@ -22,7 +22,7 @@
   </div><!--container-->
 
   <div id="backtop">
-    <%= image_tag("btn-page-top.svg", :alt => "page top") %>
+    <%=link_to :action => "new", :anchor => "pate-top" do%><%= image_tag("btn-page-top.svg", :alt => "page top") %><% end %>
   </div>
 
   <p class="copy">&copy;&nbsp;太陽光メンテプロ</p>
