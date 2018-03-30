@@ -50,6 +50,7 @@
                 <%= image_tag("icon/icon-time.svg", :alt => "時計アイコン") %>
                 カンタン10秒</p>
               <p class="txt-02">あとはコンシェルジュの連絡を待つだけ！</p>
+              <%= render 'layouts/error_messages' %>
               <%= render 'layouts/InquiryForm' %>
             </div>
           </div><!--container-fluid-->
@@ -261,6 +262,7 @@
                         <%= image_tag("icon/icon-time.svg", :alt => "時計アイコン") %>
                         カンタン10秒</p>
                       <p class="txt-02">あとはコンシェルジュの<br class="hidden-lg-up">連絡を待つだけ！</p>
+                      <%= render 'layouts/error_messages' %>
                       <%= render 'layouts/InquiryForm' %>
                     </div>
 
