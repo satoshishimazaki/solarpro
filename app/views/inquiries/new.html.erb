@@ -41,7 +41,7 @@
               <p class="txt-01">太陽光発電<br>メンテナンス業者<br>選びの専門サービス</p>
               <p class="txt-02">業者選定は時間も<br class="hidden-lg-up">かかるし、<br class="hidden-md-down">悩みますよね？<br>専門コンシェルジュが<br class="hidden-lg-up">解決します！</p>
               <p class="btn-irai hidden-lg-up">
-                <%= image_tag("btn-irai.svg", :alt => "依頼する") %>
+                <%=link_to :action => "new", :anchor => "form-boxlink" do%><%= image_tag("btn-irai.svg", :alt => "依頼する") %><% end %>
               </p>
               <%= image_tag("img-staff-01.png", :alt => "スタッフイメージ写真", :class => "img-staff") %>
             </div>
@@ -51,18 +51,6 @@
                 カンタン10秒</p>
               <p class="txt-02">あとはコンシェルジュの連絡を待つだけ！</p>
               <%= render 'layouts/InquiryForm' %>
-              <!-- <form action="" method="post">
-                <select class="st">
-                  <option value="" selected="selected">選択してください</option>
-                  <option value="">ダミー1</option>
-                  <option value="">ダミー2</option>
-                  <option value="">ダミー3</option>
-                </select>
-                <input type="text" name="" placeholder="お名前 例：山田太郎"/ >
-                <input type="tel" name="" placeholder="電話番号 例：09000000000"/>
-                <input type="email" name="" placeholder="メール 例：×××@××.co.jp"/>
-                <input type="image" src="images/btn-submit.svg" alt="送信する">
-              </form> -->
             </div>
           </div><!--container-fluid-->
         </div><!--row-->
@@ -268,7 +256,7 @@
                     </div>
                   </li>
                   <li class="col-lg-6">
-                    <div class="form-box">
+                    <div class="form-box" id="form-boxlink">
                       <p class="txt-01">
                         <%= image_tag("icon/icon-time.svg", :alt => "時計アイコン") %>
                         カンタン10秒</p>
