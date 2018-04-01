@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Solarpro</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -9,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no" />
-    <title>太陽光発電メンテナンス専門の業者紹介・選定サービス 太陽光メンテプロ</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="">
+    <title><%= full_title(yield(:title))%></title>
+    <meta name="description" content="太陽光メンテプロは、太陽光発電のメンテナンスに特化した専門の業者紹介サービス。専門のコンシェルジュがお客様の詳細情報をヒアリングし、一人一人にあったベストな業者を紹介させていただきます。太陽光メンテナンス、モジュール洗浄、草刈りなどの雑草対策、さらにはドローンを利用した点検や遠隔監視など幅広く対応いたします。" />
+    <meta name="keywords" content="太陽光発電メンテナンス、太陽光発電ドローン、太陽光、ソーラーメンテナンス、太陽光クリーニング、太陽光遠隔監視、太陽光点検">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
     <!--OGP-->
