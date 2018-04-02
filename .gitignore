@@ -66,3 +66,6 @@ node_modules/
 
 #puma.rb
 /config/puma.rb
+
+#Ignore sitemap file
+/public/sitemap.xml.gz
