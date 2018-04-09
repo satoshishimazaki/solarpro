@@ -3,5 +3,5 @@
   <%= f.text_field :name, :placeholder => "お名前 例：山田太郎"  %>
   <%= f.text_field :tel, :placeholder => "電話番号 例：09000000000" %>
   <%= f.text_field :email, :placeholder => "メール 例：×××@××.co.jp" %>
-  <%= image_submit_tag("btn-submit.svg") %>
+  <%= image_submit_tag("btn-submit.svg", :onclick => "ga('send', 'event', 'click', 'form_tap', {'nonInteraction': 1});") %> 
 <% end %>
