@@ -41,7 +41,7 @@
               <p class="txt-01">太陽光発電<br>メンテナンス業者<br>選びの専門サービス</p>
               <p class="txt-02">業者選定は時間も<br class="hidden-lg-up">かかるし、<br class="hidden-md-down">悩みますよね？<br>専門コンシェルジュが<br class="hidden-lg-up">解決します！</p>
               <p class="btn-irai hidden-lg-up">
-                <%=link_to :action => "new", :anchor => "form-boxlink" do%><%= image_tag("btn-irai.svg", :alt => "依頼する") %><% end %>
+                <%=link_to :action => "new", :anchor => "form-boxlink", :onclick => "ga('send', 'event', 'click', 'sp_irai', {'nonInteraction': 1});" do%><%= image_tag("btn-irai.svg", :alt => "依頼する") %><% end %>
               </p>
               <%= image_tag("img-staff-01.png", :alt => "スタッフイメージ写真", :class => "img-staff") %>
             </div>
@@ -250,8 +250,8 @@
 
                     <div class="tel-box hidden-md-down">
                       <p class="txt-01">お電話での<span>無料</span>見積依頼・ご相談は </p>
-                      <a href="tel:05031874372">
-                        <%= image_tag("icon/icon-tel-color.svg", :alt => "電話アイコン", :onclick => "ga('send', 'event', 'click', 'tel_tap', {'nonInteraction': 1});") %>
+                      <a href="tel:05031874372" onclick ="ga('send', 'event', 'click', 'tel_tap', {'nonInteraction': 1});">
+                        <%= image_tag("icon/icon-tel-color.svg", :alt => "電話アイコン") %>
                         050-3187-4372</a>
                       <p class="txt-02">営業時間 10:00～19:00 土・日・祝休<br>メール・問い合わせは24時間365日受付</p>
                     </div>
@@ -268,8 +268,8 @@
 
                     <div class="tel-box hidden-lg-up">
                       <p class="txt-01">お電話での<span>無料</span>見積依頼・ご相談は </p>
-                      <a href="tel:05031874372">
-                        <%= image_tag("icon/icon-tel-color.svg", :alt => "電話アイコン", :onclick => "ga('send', 'event', 'click', 'tel_tap', {'nonInteraction': 1});") %>
+                      <a href="tel:05031874372" onclick ="ga('send', 'event', 'click', 'tel_tap', {'nonInteraction': 1});">
+                        <%= image_tag("icon/icon-tel-color.svg", :alt => "電話アイコン") %>
                         050-3187-4372</a>
                       <p class="txt-02">営業時間 10:00～19:00 土・日・祝休</p>
                     </div>
